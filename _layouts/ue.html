@@ -1,0 +1,25 @@
+---
+layout: base
+---
+<div class="row">
+  <div class="at-wrapper">
+    <div class="aside3-title">{{ page.title }}</div>
+    <div class="aside3-t-date">{{ page.date | date:"%Y年%m月%d日" }}</div>
+  </div>
+  <div class="col-lg-2"></div>
+  <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 aside3">
+    <div id="content">
+      <div id="inner-cont">
+        {{ content }}
+      </div>
+    </div>
+    <hr>
+
+    {% include catetags.html %}
+    {% include related-posts.html %}
+{% if site.comments.show == true and page.comments != false %}
+    {% include disqus.html %}
+{% endif %}
+  </div>
+  <div class="col-lg-2"></div>
+</div>

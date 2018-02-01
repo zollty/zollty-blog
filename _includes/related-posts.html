@@ -1,0 +1,9 @@
+﻿<div class="related">
+        <div class="related-title">相关文章：</div>
+        <ul class="post-list">
+            {% for post in site.related_posts limit:4 %}<li>
+                <a href='{{ site.baseurl }}{{ post.url }}' class="pjaxlink">{{ post.title }}</a>
+                <span>{{ post.date | date:"%Y-%m-%d" }}</span>
+            {% endfor %}</li>
+        </ul>
+    </div>

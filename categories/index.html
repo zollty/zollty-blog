@@ -1,0 +1,20 @@
+---
+title: 分类
+layout: base
+---
+
+<div id="cate-wr" class="my-tag-bg">
+<div class="my-tag-content">
+{% for cat in site.categories %}
+  <a href="#{{ cat[0] | cgi_escape | remove: "%" }}" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }} <sup>{{ cat[1].size }}</sup></a>&nbsp;&nbsp;
+{% endfor %}
+</div>
+</div>
+<div class="my-tag-wr">
+{% for cat in site.categories reversed %}
+  <button type="button" class="btn btn-primary show" data-toggle="collapse" id="{{ cat[0] | cgi_escape | remove: "%" }}" data-target="#modal-{{ cat[0] | cgi_escape | remove: "%" }}">{{ cat[0] }} ({{ cat[1].size }})&nbsp; <span class="caret"></span></button>
+  <ul id="modal-{{ cat[0] | cgi_escape | remove: "%" }}" class="in collapse" style="height: auto;">{% for post in cat[1] %}
+  <li class="pagi-list-item"><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%Y-%m-%d" }}</time> &raquo; <a class="pjaxlink" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}</ul>
+{% endfor %}
+</div>

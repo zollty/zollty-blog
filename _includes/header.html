@@ -1,0 +1,14 @@
+<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="{{ site.author.name }}">{% if page.keywords %}
+  <meta name="keywords" content="{{ page.keywords }}">{% endif %}{% if page.description  %}
+  <meta name="description " content="{{ page.description  }}">{% endif %}
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="icon" type="image/x-icon" href="{{ site.favicon }}" />
+  <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html,'' }}">
+  <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ site.assets_url }}css/base.min.css">
+  <link href="{{ site.baseurl }}{{ site.rss_path }}" type="application/rss+xml" rel="alternate" title="{{ site.title }} RSS Feed">
+  <link href="{{ site.baseurl }}{{ site.atom_path }}" type="application/atom+xml" rel="alternate" title="{{ site.title }} ATOM Feed">

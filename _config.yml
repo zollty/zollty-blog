@@ -1,0 +1,66 @@
+# Outputting --:year/:month/
+permalink: /archive/:title.html
+paginate: 29
+paginate_path: '/index:num'
+timezone:      Asia/Shanghai
+
+# Conversion
+lsi: true # 在github中是无效的
+highlighter: pygments
+markdown: rdiscount
+
+# Serving
+baseurl: /b # does not include hostname
+# http://ires.qiniudn.com/
+assets_url: http://7ktsnb.com1.z0.glb.clouddn.com/my/
+cdn_lib_url: http://7ktsnb.com1.z0.glb.clouddn.com/lib/
+
+# 站点信息
+title: "Zollty's Blog"
+description: "Zollty's Blog"
+url: http://blog.zollty.com/b
+
+# 相对于baseurl
+atom_path: /atom.xml
+rss_path: /rss.xml
+
+# gavatar头像及Favicon
+gavatar: http://ires.qiniudn.com/my/img/avatar-80-80.jpg
+favicon: http://ires.qiniudn.com/my/img/favicon.ico
+
+# 作者信息
+author:
+  name: Zollty
+  email: zollty@163.com
+  link: http://blog.zollty.com/b
+  weibo: http://weibo.com/zollty
+  github: https://github.com/zollty-org
+
+# google analytics 设置
+ga:
+  id:
+  url:
+
+# comments 设置
+comments:
+  show: true
+  duoshuo:
+    name: abcd
+  disqus:
+    name: abcd
+
+# 主题设置，自动激活某个标签
+active: tab-技术
+
+# 首页除了最新文章外显示分类
+cates:
+  - Life
+  - CoreOS
+
+# 中文本地化
+locals:
+  tags: 标签
+  about: 关于
+  archive: 归档
+  category: 分类
+  newest: 最新文章
